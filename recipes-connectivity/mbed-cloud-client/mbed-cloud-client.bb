@@ -5,7 +5,7 @@ LICENSE = "Apache-2.0"
 LICENSE_MD5SUM = "4336ad26bb93846e47581adc44c4514d"
 SOURCE_REPOSITORY = "git://git@github.com/ARMmbed/mbed-cloud-client-example.git"
 SOURCE_BRANCH = "master"
-SRCREV = "f47856d2e3160166ac1fff7177fd58f0088280ae"
+SRCREV = "d107e6d0d7bb6f0d5f48289c5fa38f0d498d174d"
 APP_NAME = "mbed-cloud-client-example"
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/git/${APP_NAME}/mbed-cloud-client/LICENSE;md5=${LICENSE_MD5SUM}"
@@ -77,7 +77,7 @@ do_configure() {
         EXTRA_DEFINES="-DRESET_STORAGE=ON"
     fi
 
-    YOCTO_DIR=${TOPDIR} cmake -G "Unix Makefiles" ${EXTRA_DEFINES} -DCMAKE_BUILD_TYPE="${RELEASE_TYPE}" -DCMAKE_TOOLCHAIN_FILE="./../pal-platform/Toolchain/${TOOLCHAIN}/${TOOLCHAIN}.cmake" -DEXTARNAL_DEFINE_FILE="./../define-rpi3-yocto.txt"
+    YOCTO_DIR=${TOPDIR} cmake -G "Unix Makefiles" ${EXTRA_DEFINES} -DCMAKE_BUILD_TYPE="${RELEASE_TYPE}" -DCMAKE_TOOLCHAIN_FILE="./../pal-platform/Toolchain/${TOOLCHAIN}/${TOOLCHAIN}.cmake" -DEXTERNAL_DEFINE_FILE="./../define-rpi3-yocto.txt"
     cd ${CUR_DIR}
 }
 
