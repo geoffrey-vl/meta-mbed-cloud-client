@@ -2,7 +2,7 @@ DESCRIPTION="update-scripts"
 
 LICENSE = "Apache-2.0"
 LICENSE_MD5SUM = "4336ad26bb93846e47581adc44c4514d"
-SOURCE_REPOSITORY = "git://git@github.com/ARMmbed/mbed-cloud-client.git"
+SOURCE_REPOSITORY = "https://github.com/ARMmbed/mbed-cloud-client.git"
 SOURCE_BRANCH = "master"
 SRCREV = "62de4b89d2350379278893f2f7a3ac937b4ae5f6"
 SCRIPT_DIR = "${WORKDIR}/git/update-client-hub/modules/pal-linux/scripts"
