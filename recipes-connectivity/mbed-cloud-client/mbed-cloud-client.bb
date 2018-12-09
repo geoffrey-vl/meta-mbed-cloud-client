@@ -3,7 +3,7 @@ DESCRIPTION="mbed-cloud-client-example"
 TOOLCHAIN = "POKY-GLIBC"
 LICENSE = "Apache-2.0"
 LICENSE_MD5SUM = "4336ad26bb93846e47581adc44c4514d"
-SOURCE_REPOSITORY = "https://github.com/ARMmbed/mbed-cloud-client-example.git"
+SOURCE_REPOSITORY = "git://github.com/ARMmbed/mbed-cloud-client-example.git"
 SOURCE_BRANCH = "master"
 SRCREV = "528d3d58933aa1414ff184df228ec963ed051fa5"
 APP_NAME = "mbed-cloud-client-example"
@@ -13,7 +13,7 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/git/${APP_NAME}/mbed-cloud-client/LICENSE;
 # Patches for quilt goes to files directory
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI = "${SOURCE_REPOSITORY};branch=${SOURCE_BRANCH};protocol=ssh;name=${APP_NAME};destsuffix=git/${APP_NAME}; \
+SRC_URI = "${SOURCE_REPOSITORY};branch=${SOURCE_BRANCH};protocol=http;name=${APP_NAME};destsuffix=git/${APP_NAME}; \
     file://yocto-toolchain.cmake \
     file://CloudClientExample.sh"
 
@@ -45,7 +45,7 @@ do_setup_pal_env() {
     cd "${WORKDIR}/git/${APP_NAME}"
     # Clean the old build directory
     rm -rf "__${TARGET}"
-    ${binlocaldir}/mbed deploy --protocol ssh
+    ${binlocaldir}/mbed deploy --protocol http
     SSH_AUTH_SOCK=${SSH_AUTH_SOCK} python ./pal-platform/pal-platform.py -v deploy --target="${TARGET}" generate
     cd ${CUR_DIR}
 }
