@@ -1,5 +1,6 @@
 # Base this image on console-image
 include recipes-core/images/console-image.bb
+inherit core-image
 
 LICENSE = "Apache-2.0"
 

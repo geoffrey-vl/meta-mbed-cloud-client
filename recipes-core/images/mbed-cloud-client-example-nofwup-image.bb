@@ -2,6 +2,7 @@
 include recipes-core/users_and_security/general-security.bb
 # Include image recipe for HW configurations
 include recipes-core/images/mbed-cloud-console-image.bb
+inherit core-image
 
 LICENSE = "Apache-2.0"
 
