@@ -9,3 +9,5 @@ LICENSE = "Apache-2.0"
 # Include modules in rootfs
 IMAGE_INSTALL += " \
 	mbed-cloud-client"
+
+export IMAGE_BASENAME = "mbed-cloud-client-example-nofwup-image"

@@ -15,3 +15,4 @@ IMAGE_INSTALL += " \
 	rng-tools \
 	e2fsprogs"
 
+export IMAGE_BASENAME = "mbed-cloud-console-image"
